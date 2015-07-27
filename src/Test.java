@@ -3,6 +3,7 @@ class Test
     public static void main(String[] args)
     {
         testSum();
+        testSubtract();
     }
 
     private static void testSum()
@@ -20,5 +21,23 @@ class Test
         {
             System.out.println("Sum: Failed, expected = " + expected + ", result = " + result);
         }
+     }
+
+    private static void testSubtract()
+    {
+      int a = 6;
+      int b = 1;
+      int expected = 5;
+      BasicMath bm = new BasicMath();
+      int result = bm.subtract(a, b);
+      if( result == expected)
+      {
+        System.out.println("Subtract: OK");
+      }
+      else
+      {
+        System.out.println("Subtract: Failed, expected = " + expected + ", result = " + result);
+      }
     }
+
 }
